@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="Scripts/jquery-1.7.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var ulEmployees = $('#ulEmployees');
+            $('#btn').click(function () {
+                $.ajax({
+                    type:'Get',
+                    url: 'api/Employee',
+                    datatype: 'json',
+                    success: function (data) {
+                        ulEmployees.empty();
+                        $.each(data, function (index, val) {
+                            var Customer_Name = val.Customer_Name;
+                            ulEmployees.append('<li>'+Customer_Name+'</li>');
+                        });
+                    }
+                });
+            });
+            $('#btnClear').click(function () {
+                ulEmployees.empty();
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+            $("#btnAdd").click(function () {
+
+                var PersonalDetails = {
+                    "Bank_Name": "HDFC",
+                    "Account_Name": "HDFC123478",
+                    "Customer_Name": "Prasant",
+                    "father_Name": "Ram Lal",
+                    "Mobil_No": "9876543213"
+
+                };
+
+                $.ajax({
+                    type: "POST",
+                    url: '/api/Employee/AddEmployee',
+                    data: JSON.stringify(PersonalDetails),
+                    contentType: "application/json;charset=utf-8",
+                    success: function (data, status, xhr) {
+                        alert("The em is : "+data);
+                    },
+                    error: function (xhr) {
+                        alert(xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<input id="btn" type="button" value="Get All Employees" />
+    <input id="btnClear" type="button" value="Clear" />
+    <input id="btnAdd" type="button" value="Insert new Employee" />
+    
+    <ul id="ulEmployees"></ul>
+</body>
+</html>

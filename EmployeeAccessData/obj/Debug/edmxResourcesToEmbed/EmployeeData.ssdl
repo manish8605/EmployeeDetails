@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WebApiModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="WebApiModelStoreContainer">
+    <EntitySet Name="AccountHolderDetails" EntityType="WebApiModel.Store.AccountHolderDetails" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="AccountHolderDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Bank_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Account_Number" Type="nvarchar" MaxLength="50" />
+    <Property Name="Customer_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Date_of_Birth" Type="nvarchar" MaxLength="10" />
+    <Property Name="Father_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Gender" Type="varchar" MaxLength="10" />
+    <Property Name="PAN" Type="nvarchar" MaxLength="12" />
+    <Property Name="Aadhaar" Type="nvarchar" MaxLength="12" />
+    <Property Name="CIF_Id" Type="nvarchar" MaxLength="10" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="City" Type="varchar" MaxLength="10" />
+    <Property Name="Pin_Code" Type="nvarchar" MaxLength="10" />
+    <Property Name="Email_Id" Type="nvarchar" MaxLength="50" />
+    <Property Name="Mobile_Number" Type="nvarchar" MaxLength="13" />
+    <Property Name="Nominee_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Nature_of_Account" Type="varchar" MaxLength="10" />
+    <Property Name="Type_of_Account" Type="varchar" MaxLength="10" />
+    <Property Name="Scheme_Code" Type="nvarchar" MaxLength="10" />
+    <Property Name="Identification_proof_Document_Id" Type="nvarchar" MaxLength="10" />
+    <Property Name="Identification_proof_Document_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Address_proof_Document_Id" Type="nvarchar" MaxLength="10" />
+    <Property Name="Address_proof_Document_Name" Type="varchar" MaxLength="50" />
+  </EntityType>
+</Schema>

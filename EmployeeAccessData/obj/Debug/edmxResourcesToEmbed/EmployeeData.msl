@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WebApiModelStoreContainer" CdmEntityContainer="WebApiEntities">
+    <EntitySetMapping Name="AccountHolderDetails">
+      <EntityTypeMapping TypeName="WebApiModel.AccountHolderDetail">
+        <MappingFragment StoreEntitySet="AccountHolderDetails">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Bank_Name" ColumnName="Bank_Name" />
+          <ScalarProperty Name="Account_Number" ColumnName="Account_Number" />
+          <ScalarProperty Name="Customer_Name" ColumnName="Customer_Name" />
+          <ScalarProperty Name="Date_of_Birth" ColumnName="Date_of_Birth" />
+          <ScalarProperty Name="Father_Name" ColumnName="Father_Name" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="PAN" ColumnName="PAN" />
+          <ScalarProperty Name="Aadhaar" ColumnName="Aadhaar" />
+          <ScalarProperty Name="CIF_Id" ColumnName="CIF_Id" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Pin_Code" ColumnName="Pin_Code" />
+          <ScalarProperty Name="Email_Id" ColumnName="Email_Id" />
+          <ScalarProperty Name="Mobile_Number" ColumnName="Mobile_Number" />
+          <ScalarProperty Name="Nominee_Name" ColumnName="Nominee_Name" />
+          <ScalarProperty Name="Nature_of_Account" ColumnName="Nature_of_Account" />
+          <ScalarProperty Name="Type_of_Account" ColumnName="Type_of_Account" />
+          <ScalarProperty Name="Scheme_Code" ColumnName="Scheme_Code" />
+          <ScalarProperty Name="Identification_proof_Document_Id" ColumnName="Identification_proof_Document_Id" />
+          <ScalarProperty Name="Identification_proof_Document_Name" ColumnName="Identification_proof_Document_Name" />
+          <ScalarProperty Name="Address_proof_Document_Id" ColumnName="Address_proof_Document_Id" />
+          <ScalarProperty Name="Address_proof_Document_Name" ColumnName="Address_proof_Document_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
